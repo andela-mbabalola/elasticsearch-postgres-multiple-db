@@ -63,7 +63,7 @@ function addDocument(document, indexName) {
             ...document,
             suggest: {
                 input: Object.keys(document).reduce((acc, val) => {
-                  acc = acc + document[val];
+                  acc = acc + " " + document[val];
                   return acc;
                 }, '').split(" ").filter(x => !!x)
             }
